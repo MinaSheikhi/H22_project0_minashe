@@ -9,7 +9,7 @@ def test_divide():
     assert divide(16,2) == 8
 
 def test_factorial():
-    assert factorial(5) == 20
+    assert factorial(5) == 120
     assert factorial(1) == 1
 
 def test_sin():
