@@ -9,11 +9,16 @@ def divide(x: float, y:float) -> float:
     return x/y
 
 def factorial(n):
-    s = 1
-    for i in range(1,n+1):
-        s = s * i
-    return s
-
+    if n <= -1:
+        raise ValueError
+    elif isinstance(n,float):
+        raise TypeError
+    else:
+        s=1
+        for i in range(1,n+1):
+            s = s * i
+        return s
+    
 
 def sin(x, N=20):
     s = 0
