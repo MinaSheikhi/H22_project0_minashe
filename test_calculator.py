@@ -29,5 +29,24 @@ def test_is_decimal_raises_TypeError_for_string_arguments():
         divide(5, 0)
 # Not needed to modify code for this test to pass
 
-    
-    
+
+@pytest.mark.parametrize("x, y, output", [(1,2,3), (1,3,4), (2,3,5)])
+def test_add_parametrized(x,y, output):
+    assert abs(add(x,y) - output) < 1e-14
+
+@pytest.mark.parametrize("x, y, output", [(10,5,2), (3,1,3), (4,4,1)])
+def test_divide_parameterized(x, y, output):
+    assert divide(x,y) == output
+
+@pytest.mark.parametrize("arg, output", [(5,120), (3,6), (1,1)])
+def test_factorial_parameterized(arg, output):
+    assert factorial(arg) == output
+
+@pytest.mark.parametrize("arg, output", [(0,0), (pi/4,1/sqrt(2)), (pi/2,1)])
+def test_sin_parameterized(arg, output):
+    assert abs(sin(arg) - output) < 1e-14  
+
+@pytest.mark.parametrize("arg, output", [(1,1), (4,2), (16,4)])
+def test_sqrt_parameterized(arg, output):
+    assert abs(sqrt(arg) - output) < 1e-11  
+
