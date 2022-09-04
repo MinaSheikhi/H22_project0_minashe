@@ -21,11 +21,11 @@ def test_sqrt():
     assert sqrt(9) == 3
 
 def test_is_float_raises_ValueError_for_string_arguments():
-    with pytest.raises(ValueError):
+    with pytest.raises(ValueError): # for factorial(-1) raise a ValueError 
         factorial(-1)
 
 def test_is_decimal_raises_TypeError_for_string_arguments():
-    with pytest.raises(ZeroDivisionError):
+    with pytest.raises(ZeroDivisionError): 
         divide(5, 0)
 # Not needed to modify code for this test to pass
 
@@ -36,7 +36,8 @@ def test_add_parametrized(x,y, output):
 
 @pytest.mark.parametrize("x, y, output", [(10,5,2), (3,1,3), (4,4,1)])
 def test_divide_parameterized(x, y, output):
-    assert divide(x,y) == output
+         assert divide(x,y) == output
+    
 
 @pytest.mark.parametrize("arg, output", [(5,120), (3,6), (1,1)])
 def test_factorial_parameterized(arg, output):
