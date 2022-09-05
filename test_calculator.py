@@ -36,7 +36,7 @@ def test_add_parametrized(x,y, output):
 
 @pytest.mark.parametrize("x, y, output", [(10,5,2), (3,1,3), (4,4,1)])
 def test_divide_parameterized(x, y, output):
-         assert divide(x,y) == output
+    assert divide(x,y) == output
     
 
 @pytest.mark.parametrize("arg, output", [(5,120), (3,6), (1,1)])
