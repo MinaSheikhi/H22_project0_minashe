@@ -9,5 +9,5 @@ First project in IN1910 about testing with pytest and git
 
 - Mina Sheikhi (minashe@math.uio.no)
 
-## Comments
+## Comments about the project
 I had to pull some of the branches again after doing exercise 10 because the changes had not been pulled. 
